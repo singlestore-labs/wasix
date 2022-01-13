@@ -45,12 +45,12 @@ make all_abort
 
 To use `libwasix.a`, add the following options to your compilation step:
 ```
--isystem ${WASI_DIR}/include
+-isystem ${WASIX_DIR}/include
 ```
 
 Then add the following options to your link step:
 ```
--L${WASI_DIR} -lwasix
+-L${WASIX_DIR} -lwasix
 ```
 
 
