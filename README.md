@@ -77,9 +77,10 @@ include `chmod`, `fchmod`, `chown`, `fchown`, and `umask` (returns `0755`).
 
 ## Threads
 
-Currently, threads are stubbed out and do not work. We are planning on doing
-a thread implementation based on async which will enable threads to be created
-although only one thread will actually be working at any time.
+Currently, threads are stubbed out and do not allow new threads to be created.
+We are planning on doing a thread implementation based on async which will
+enable threads to be created although only one thread will actually be working
+at any time.
 
 
 # Resources
