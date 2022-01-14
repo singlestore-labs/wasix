@@ -18,7 +18,6 @@ a static value given at compile time or an environment variable specified
 at runtime. This allows you to more closely emulate some POSIX functions
 in your environment as needed.
 
-
 ## Build
 
 The build requirements for WASIX are the same as for 
@@ -53,7 +52,6 @@ Then add the following options to your link step:
 -L${WASIX_DIR} -lwasix
 ```
 
-
 ## Static Return Value Functions
 
 Some functions in WASIX can be configured to return a static value rather
@@ -75,7 +73,16 @@ Some functions in WASIX do nothing and return a successful return value. These
 include `chmod`, `fchmod`, `chown`, `fchown`, and `umask` (returns `0755`).
 
 
-## Resources
+# ToDo
+
+## Threads
+
+Currently, threads are stubbed out and do not work. We are planning on doing
+a thread implementation based on async which will enable threads to be created
+although only one thread will actually be working at any time.
+
+
+# Resources
 
 [WASM](https://webassembly.org)
 
