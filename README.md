@@ -60,14 +60,19 @@ Some functions in WASIX can be configured to return a static value rather
 than an error. The following functions can be configured in the specified
 ways.
 
-| *Function* | *Environment Variable* | *Compile-Time Definition* | *Default* |
-|------------|------------------------|---------------------------|-----------|
-| `getpid`   | `WASIX_PID`            | `-D_WASIX_PID=value`      | 66600     |
-| `getppid`  | `WASIX_PPID`           | `-D_WASIX_PPID=value`     | 55500     |
-| `getuid`   | `WASIX_UID`            | `-D_WASIX_UID=value`      | 1         |
-| `geteuid`  | `WASIX_EUID`           | `-D_WASIX_EUID=value`     | 1         |
-| `getgid`   | `WASIX_GID `           | `-D_WASIX_GID=value`      | 100       |
-| `getegid`  | `WASIX_EGID`           | `-D_WASIX_EGID=value`     | 100       |
+| **Function** | **Environment Variable** | **Compile-Time Definition** | **Default** |
+|--------------|--------------------------|-----------------------------|-------------|
+| `getpid`     | `WASIX_PID`              | `-D_WASIX_PID=value`        | 66600       |
+| `getppid`    | `WASIX_PPID`             | `-D_WASIX_PPID=value`       | 55500       |
+| `getuid`     | `WASIX_UID`              | `-D_WASIX_UID=value`        | 1           |
+| `geteuid`    | `WASIX_EUID`             | `-D_WASIX_EUID=value`       | 1           |
+| `getgid`     | `WASIX_GID `             | `-D_WASIX_GID=value`        | 100         |
+| `getegid`    | `WASIX_EGID`             | `-D_WASIX_EGID=value`       | 100         |
+
+## Ignored Functions
+
+Some functions in WASIX do nothing and return a successful return value. These
+include `chmod`, `fchmod`, `chown`, `fchown`, and `umask` (returns `0755`).
 
 
 ## Resources
