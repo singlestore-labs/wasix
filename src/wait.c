@@ -5,11 +5,11 @@
 
 
 pid_t wait(int *wstatus) {
-    (void)unimplemented(ECHILD);
+    (void)unimplemented(ENOTSUP);
     return -1;
 }
 
 pid_t waitpid(pid_t pid, int *wstatus, int options) {
-    (void)unimplemented(ECHILD);
+    (void)unimplemented(ENOTSUP);
     return -1;
 }

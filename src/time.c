@@ -5,11 +5,11 @@
 
 
 int utimes(const char* filename, const struct timeval times[2]) {
-    (void)unimplemented(EACCES);
+    (void)unimplemented(ENOTSUP);
     return -1;
 }
 
 clock_t clock(void) {
-    (void)unimplemented(EACCES);
+    (void)unimplemented(ENOTSUP);
     return -1;
 }

@@ -7,7 +7,7 @@
 
 
 int dup(int x) {
-    (void)unimplemented(EBADF);
+    (void)unimplemented(ENOTSUP);
     return -1;
 }
 
@@ -104,32 +104,32 @@ int ttyname_r(int fd, char *buf, size_t buflen) {
 }
 
 int system(const char *command) {
-    (void)unimplemented(EAGAIN);
+    (void)unimplemented(ENOTSUP);
     return -1;
 }
 
 int execv(const char *pathname, char *const argv[]) {
-    (void)unimplemented(EMFILE);
+    (void)unimplemented(ENOTSUP);
     return -1;
 }
 
 int execve(const char *pathname, char *const argv[], char *const envp[]) {
-    (void)unimplemented(EMFILE);
+    (void)unimplemented(ENOTSUP);
     return -1;
 }
 
 int pipe(int pipefd[2]) {
-    (void)unimplemented(EFAULT);
+    (void)unimplemented(ENOTSUP);
     return -1;
 }
 
 pid_t fork(void) {
-    (void)unimplemented(EAGAIN);
+    (void)unimplemented(ENOTSUP);
     return -1;
 }
 
 int gethostname(char *name, size_t len) {
-    (void)unimplemented(EFAULT);
+    (void)unimplemented(ENOTSUP);
     return -1;
 }
 
