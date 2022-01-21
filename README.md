@@ -83,6 +83,14 @@ enable threads to be created although only one thread will actually be working
 at any time.
 
 
+# Credits
+
+Some of the structure definitions in the header and source files were taken 
+from the WASI SDK sources and modified to include additions to assist in the
+compilation of various libraries. The WASI SDK uses the same license as
+this project.
+
+
 # Resources
 
 [WASM](https://webassembly.org)
