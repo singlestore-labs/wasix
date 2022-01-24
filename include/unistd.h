@@ -22,6 +22,7 @@ int execv(const char *pathname, char *const argv[]);
 int execve(const char *pathname, char *const argv[], char *const envp[]);
 
 int ttyname_r(int fd, char *buf, size_t buflen);
+char *ttyname(int fd);
 
 int pipe(int pipefd[2]);
 

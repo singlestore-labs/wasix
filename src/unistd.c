@@ -95,12 +95,17 @@ gid_t getegid(void) {
 #endif
 }
 
+char *ttyname(int fd) {
+    (void)unimplemented(ENOTSUP);
+    return NULL;
+}
+
 int ttyname_r(int fd, char *buf, size_t buflen) {
-    (void)unimplemented(0);
+    (void)unimplemented(ENOTSUP);
     if (buf && buflen > 0) {
         buf[0] = '\0';
     }
-    return 0;
+    return -1;
 }
 
 int system(const char *command) {
