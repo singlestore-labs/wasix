@@ -25,10 +25,12 @@ int listen(int sockfd, int backlog) {
     return -1;
 }
 
+#ifdef WASI_SDK_14
 int accept(int sockfd, struct sockaddr *addr, socklen_t *addrlen) {
     (void)unimplemented(ENOTSUP);
     return -1;
 }
+#endif
 
 int socketpair(int domain, int type, int protocol, int sv[2]) {
     (void)unimplemented(ENOTSUP);
