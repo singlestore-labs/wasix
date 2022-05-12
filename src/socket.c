@@ -25,7 +25,7 @@ int listen(int sockfd, int backlog) {
     return -1;
 }
 
-#if WASI_SDK_14
+#ifdef WASI_SDK_14
 int accept(int sockfd, struct sockaddr *addr, socklen_t *addrlen) {
     (void)unimplemented(ENOTSUP);
     return -1;
