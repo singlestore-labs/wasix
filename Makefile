@@ -1,9 +1,9 @@
 # Root directory of the WASI SDK
-WASI_SDK_PATH=/opt/wasi-sdk
+WASI_SDK_PATH ?=/opt/wasi-sdk
 # Custom CFLAGS
-WASI_CFLAGS=
+WASI_CFLAGS ?=
 # Install target
-DESTDIR=/opt/wasix
+DESTDIR ?=/opt/wasix
 
 CC=$(WASI_SDK_PATH)/bin/clang
 WASI_BASE_CFLAGS= \
