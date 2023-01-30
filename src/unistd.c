@@ -1,4 +1,5 @@
 
+#include <limits.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
@@ -7,6 +8,11 @@
 
 
 int dup(int x) {
+    (void)unimplemented(ENOTSUP);
+    return -1;
+}
+
+int dup2(int x, int y) {
     (void)unimplemented(ENOTSUP);
     return -1;
 }
@@ -138,3 +144,18 @@ int gethostname(char *name, size_t len) {
     return -1;
 }
 
+char *realpath(const char *restrict path, char *restrict resolved_path) {
+    unsigned long long len = strlen(path);
+
+    len = (len > PATH_MAX) ? PATH_MAX : len;
+
+    if (!resolved_path)
+    {
+        resolved_path = malloc(len + 1);
+        if (!resolved_path) return NULL;
+    }
+
+    strncpy(resolved_path, path, len);
+    resolved_path[len] = '\0';
+    return resolved_path;
+}

@@ -30,4 +30,6 @@ pid_t fork(void);
 
 int gethostname(char *name, size_t len);
 
+char *realpath(const char *restrict path, char *restrict resolved_path);
+
 #endif
