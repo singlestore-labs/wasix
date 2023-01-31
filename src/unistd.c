@@ -129,6 +129,16 @@ int execve(const char *pathname, char *const argv[], char *const envp[]) {
     return -1;
 }
 
+int execvp(const char *file, char *const argv[]) {
+    (void)unimplemented(ENOTSUP);
+    return -1;
+}
+
+int execvpe(const char *file, char *const argv[], char *const envp[]) {
+    (void)unimplemented(ENOTSUP);
+    return -1;
+}
+
 int pipe(int pipefd[2]) {
     (void)unimplemented(ENOTSUP);
     return -1;

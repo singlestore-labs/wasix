@@ -57,15 +57,15 @@ extern "C" {
 #define PTHREAD_PROCESS_SHARED 1
 
 
-#if defined(__wasilibc_unmodified_upstream) || defined(_REENTRANT)
+//#if defined(__wasilibc_unmodified_upstream) || defined(_REENTRANT)
 #define PTHREAD_MUTEX_INITIALIZER {{{0}}}
 #define PTHREAD_RWLOCK_INITIALIZER {{{0}}}
 #define PTHREAD_COND_INITIALIZER {{{0}}}
-#else
-#define PTHREAD_MUTEX_INITIALIZER 0
-#define PTHREAD_RWLOCK_INITIALIZER 0
-#define PTHREAD_COND_INITIALIZER 0
-#endif
+//#else
+//#define PTHREAD_MUTEX_INITIALIZER 0
+//#define PTHREAD_RWLOCK_INITIALIZER 0
+//#define PTHREAD_COND_INITIALIZER 0
+//#endif
 #define PTHREAD_ONCE_INIT 0
 
 
@@ -234,6 +234,7 @@ int pthread_tryjoin_np(pthread_t, void **);
 int pthread_timedjoin_np(pthread_t, void **, const struct timespec *);
 #endif
 
+#ifdef _REDIR_TIME64
 #if _REDIR_TIME64
 __REDIR(pthread_mutex_timedlock, __pthread_mutex_timedlock_time64);
 __REDIR(pthread_cond_timedwait, __pthread_cond_timedwait_time64);
@@ -241,6 +242,7 @@ __REDIR(pthread_rwlock_timedrdlock, __pthread_rwlock_timedrdlock_time64);
 __REDIR(pthread_rwlock_timedwrlock, __pthread_rwlock_timedwrlock_time64);
 #ifdef _GNU_SOURCE
 __REDIR(pthread_timedjoin_np, __pthread_timedjoin_np_time64);
+#endif
 #endif
 #endif
 

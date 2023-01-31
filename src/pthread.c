@@ -132,3 +132,10 @@ int pthread_setspecific(pthread_key_t key, const void *value){
     *(void**)key = (void*)value;
     return 0;
 }
+
+int pthread_join(pthread_t thread, void **retval)
+{
+    retval = PTHREAD_CANCELED;
+    return EINVAL;
+}
+

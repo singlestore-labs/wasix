@@ -20,6 +20,8 @@ pid_t getppid(void);
 int system(const char *command);
 int execv(const char *pathname, char *const argv[]);
 int execve(const char *pathname, char *const argv[], char *const envp[]);
+int execvp(const char *file, char *const argv[]);
+int execvpe(const char *file, char *const argv[], char *const envp[]);
 
 int ttyname_r(int fd, char *buf, size_t buflen);
 char *ttyname(int fd);

@@ -3,7 +3,7 @@ WASI_SDK_PATH ?=/opt/wasi-sdk
 # Custom CFLAGS
 WASI_CFLAGS ?=
 # Install target
-DESTDIR ?=/opt/wasix
+DESTDIR ?=/opt
 
 CC=$(WASI_SDK_PATH)/bin/clang
 WASI_BASE_CFLAGS= \
