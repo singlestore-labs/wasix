@@ -1,6 +1,8 @@
 
 # WASIX
 
+**Attention**: The code in this repository is intended for experimental use only and is not fully tested, documented, or supported by SingleStore. Visit the [SingleStore Forums](https://www.singlestore.com/forum/) to ask questions about this repository.
+
 This library provides stubs for POSIX compatibility when compiling sources
 using the [WASI SDK](https://github.com/WebAssembly/wasi-sdk). The WASI SDK
 and the accomanying [wasi-libc](https://github.com/WebAssembly/wasi-libc) do
